@@ -5,5 +5,7 @@ services:
     #restart: always
     image: nakanod/wail
     build: .
+    env_file:
+      - ./.env
     network_mode: host
     command: mix phx.server
