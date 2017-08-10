@@ -8,3 +8,12 @@ config :wail, WailWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# Configure your database
+config :wail, Wail.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "wail_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox

@@ -5,6 +5,10 @@
 # is restricted to this project.
 use Mix.Config
 
+# General application configuration
+config :wail,
+  ecto_repos: [Wail.Repo]
+
 # Configures the endpoint
 config :wail, WailWeb.Endpoint,
   url: [host: "localhost"],
