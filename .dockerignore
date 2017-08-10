@@ -1,4 +1,11 @@
+README.md
 .DS_store
 *.swp
 .env
 .env.sample
+.dockerignore
+Dockerfile
+docker-compose.yml
+docker-compose.yml.sample
+.git
+.gitignore

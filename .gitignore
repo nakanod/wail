@@ -15,5 +15,5 @@ erl_crash.dump
 # variables.
 /config/*.secret.exs
 
-docker-compose.yml
+/docker-compose.yml
 /.env
