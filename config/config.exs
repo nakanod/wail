@@ -12,7 +12,7 @@ config :wail,
 # Configures the endpoint
 config :wail, WailWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "PZf+aNFwNd/lVU5AdnJokaGfko6Mj6BBv7LN2jEWjoRsAHsfHTCfVhmDXZq4nUaW",
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   render_errors: [view: WailWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Wail.PubSub,
            adapter: Phoenix.PubSub.PG2]
