@@ -11,5 +11,8 @@ RUN mix archive.install --force https://github.com/phoenixframework/archives/raw
 COPY ./mix.exs /wail
 RUN mix deps.get --force
 
-COPY . /wail
+COPY ./config /wail/config
+COPY ./lib /wail/lib
+COPY ./priv /wail/priv
+COPY ./test /wail/test
 RUN mix deps.compile --force
