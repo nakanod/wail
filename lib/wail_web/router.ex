@@ -14,13 +14,14 @@ defmodule WailWeb.Router do
   end
 
   scope "/", WailWeb do
-    pipe_through :api # Use the default browser stack
+    pipe_through :browser # Use the default browser stack
 
-    get "/", ApiController, :index
+    get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", WailWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", WailWeb do
+    pipe_through :api
+    get "/", ApiController, :index
+  end
 end
