@@ -9,6 +9,7 @@ RUN mix local.rebar --force
 RUN mix archive.install --force https://github.com/phoenixframework/archives/raw/master/phx_new-${PHOENIX_VERSION}.ez
 
 COPY ./mix.exs /wail
+COPY ./mix.lock /wail
 RUN mix deps.get --force
 
 COPY ./config /wail/config
